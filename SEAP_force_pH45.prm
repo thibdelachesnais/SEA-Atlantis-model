@@ -1,0 +1,491 @@
+# PC Version (created by Beth Fulton and Adam Davidson)
+#
+# Hydrodynamic files - this is for 1991 to 1994, but 1991 and 1992 are
+# faked from 1993 data.
+# input directories  
+#nhdfiles 1
+#hd0.name inputs/forcisets/SEAP132_hydro.nc
+
+nhdfiles 9
+
+hd0.name inputs/forcisets/SEAP132_hydroB.nc
+hd1.name inputs/forcisets/SEAP132_hydroC.nc
+hd2.name inputs/forcisets/SEAP132_hydroD.nc
+hd3.name inputs/forcisets/SEAP132_hydroE.nc
+hd4.name inputs/forcisets/SEAP132_hydroF.nc
+hd5.name inputs/forcisets/SEAP132_hydroG.nc
+hd6.name inputs/forcisets/SEAP132_hydroH.nc
+hd7.name inputs/forcisets/SEAP132_hydroI.nc
+hd8.name inputs/forcisets/SEAP132_hydroJ.nc
+
+
+# Bottom stress
+# BottomStress inputs/stress/stress.nc
+# BottomStress inputs/stress/nxstress.nc
+
+#############################################
+# Point source\sink lists
+npointss 0
+
+##########################################
+# Rain and evaporation
+Precipitation inputs/meteor/times1.6.nc
+Evaporation   inputs/meteor/84-95.nc
+
+# Solar time series run vicmpa file
+Solar_radiation inputs/forcisets/solar9195.ts
+Solar_radiation_rewind 1
+
+# Temperature time series run vicmpa file
+use_tempfiles 1
+ntempfiles 1
+Temperature0.name inputs/forcisets/SEAP_Temp_SRESA2_mk3.5_10032100.nc
+temp_rewind 1
+
+# Salinity time series data file
+use_saltfiles 1
+nsaltfiles 1
+Salinity0.name inputs/forcisets/SEAP_Salt_SRESA2_mk3.5_10032100.nc
+salt_rewind 1
+
+use_phFiles 0
+
+# Atmospheric pCO2 time series file
+pCO2_forcing inputs/forcisets/pCO2RCP45.ts
+
+# Recruitment_time_series
+
+# Recruitment_enviro_forcing
+
+# Frequency of inputs.ts and exports.ts output. Write out every 365 days.
+inputs_tout 365 days
+
+#############################################
+# Historical catch lists - nCatchts is the number of time series to be loaded and
+# typeCatchts is whether or not the data is to be interpolated (0) by the model
+# or just use previous record (1)
+nCatchts 0
+typeCatchts 1
+ts_on_hydro_time 1
+
+Catchts0.name box0catch
+Catchts0.location 4037444.545 1189088.369 0
+Catchts0.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\boundary.ts
+Catchts0.rewind 0
+
+Catchts1.name box1catch
+Catchts1.location 4132122.915 1222343.478 1
+Catchts1.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch1.ts
+Catchts1.rewind 0
+
+Catchts2.name box2catch
+Catchts2.location 4455094.666 1962425.631 2
+Catchts2.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\boundary.ts
+Catchts2.rewind 0
+
+Catchts3.name box3catch
+Catchts3.location 4466763.8 1948951.289 3
+Catchts3.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\boundary.ts
+Catchts3.rewind 0
+
+Catchts4.name box4catch
+Catchts4.location 4424064.885 1881860.018 4
+Catchts4.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch2.ts
+Catchts4.rewind 0
+
+Catchts5.name box5catch
+Catchts5.location 4781227.679 1862520.066 5
+Catchts5.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\boundary.ts
+Catchts5.rewind 0
+
+Catchts6.name box6catch
+Catchts6.location 4438958.892 1875977.079 6
+Catchts6.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch3.ts
+Catchts6.rewind 0
+
+Catchts7.name box7catch
+Catchts7.location 4391812.826 1752413.136 7
+Catchts7.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch4.ts
+Catchts7.rewind 0
+
+Catchts8.name box8catch
+Catchts8.location 4615057.706 1855674.943 8
+Catchts8.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch5.ts
+Catchts8.rewind 0
+
+Catchts9.name box9catch
+Catchts9.location 4423031.406 1823112.93 9
+Catchts9.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch6.ts
+Catchts9.rewind 0
+
+Catchts10.name box10catch
+Catchts10.location 4433006.724 1821751.504 10
+Catchts10.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch7.ts
+Catchts10.rewind 0
+
+Catchts11.name box11catch
+Catchts11.location 3957035.083 1792443.994 11
+Catchts11.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch8.ts
+Catchts11.rewind 0
+
+Catchts12.name box12catch
+Catchts12.location 4580376.976 1610399.102 12
+Catchts12.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch9.ts
+Catchts12.rewind 0
+
+Catchts13.name box13catch
+Catchts13.location 4417061.105 1814691.447 13
+Catchts13.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch10.ts
+Catchts13.rewind 0
+
+Catchts14.name box14catch
+Catchts14.location 4421108.521 1811634.016 14
+Catchts14.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch11.ts
+Catchts14.rewind 0
+
+Catchts15.name box15catch
+Catchts15.location 4428305.472 1807017.151 15
+Catchts15.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch12.ts
+Catchts15.rewind 0
+
+Catchts16.name box16catch
+Catchts16.location 4414557.397 1807718.938 16
+Catchts16.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch13.ts
+Catchts16.rewind 0
+
+Catchts17.name box17catch
+Catchts17.location 4414140.508 1809592.825 17
+Catchts17.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch14.ts
+Catchts17.rewind 0
+
+Catchts18.name box18catch
+Catchts18.location 4422283.857 1807764.191 18
+Catchts18.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch15.ts
+Catchts18.rewind 0
+
+Catchts19.name box19catch
+Catchts19.location 4762576.954 1440563.591 19
+Catchts19.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\boundary.ts
+Catchts19.rewind 0
+
+Catchts20.name box20catch
+Catchts20.location 4380647.76 1791380.934 20
+Catchts20.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch16.ts
+Catchts20.rewind 0
+
+Catchts21.name box21catch
+Catchts21.location 4418783.578 1804863.683 21
+Catchts21.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch17.ts
+Catchts21.rewind 0
+
+Catchts22.name box22catch
+Catchts22.location 4393567.608 1779566.65 22
+Catchts22.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch18.ts
+Catchts22.rewind 0
+
+Catchts23.name box23catch
+Catchts23.location 4407525.641 1802833.021 23
+Catchts23.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch19.ts
+Catchts23.rewind 0
+
+Catchts24.name box24catch
+Catchts24.location 4413563.762 1803731.133 24
+Catchts24.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch20.ts
+Catchts24.rewind 0
+
+Catchts25.name box25catch
+Catchts25.location 4385257.422 1790623.357 25
+Catchts25.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch21.ts
+Catchts25.rewind 0
+
+Catchts26.name box26catch
+Catchts26.location 4400123.766 1794071.137 26
+Catchts26.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch22.ts
+Catchts26.rewind 0
+
+Catchts27.name box27catch
+Catchts27.location 4414279.88 1773287.015 27
+Catchts27.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch23.ts
+Catchts27.rewind 0
+
+Catchts28.name box28catch
+Catchts28.location 4252932.51 1791338.449 28
+Catchts28.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch24.ts
+Catchts28.rewind 0
+
+Catchts29.name box29catch
+Catchts29.location 4389306.8 1787127.603 29
+Catchts29.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch25.ts
+Catchts29.rewind 0
+
+Catchts30.name box30catch
+Catchts30.location 4322745.42 1789884.839 30
+Catchts30.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch26.ts
+Catchts30.rewind 0
+
+Catchts31.name box31catch
+Catchts31.location 4252458.295 1788112.058 31
+Catchts31.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch27.ts
+Catchts31.rewind 0
+
+Catchts32.name box32catch
+Catchts32.location 4280925.658 1774522.169 32
+Catchts32.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch28.ts
+Catchts32.rewind 0
+
+Catchts33.name box33catch
+Catchts33.location 4348565.825 1784972.708 33
+Catchts33.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch29.ts
+Catchts33.rewind 0
+
+Catchts34.name box34catch
+Catchts34.location 4261574.848 1783168.484 34
+Catchts34.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch30.ts
+Catchts34.rewind 0
+
+Catchts35.name box35catch
+Catchts35.location 4365400.588 1779365.155 35
+Catchts35.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch31.ts
+Catchts35.rewind 0
+
+Catchts36.name box36catch
+Catchts36.location 4348454.832 1781270.964 36
+Catchts36.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch32.ts
+Catchts36.rewind 0
+
+Catchts37.name box37catch
+Catchts37.location 4330158.347 1777432.164 37
+Catchts37.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch33.ts
+Catchts37.rewind 0
+
+Catchts38.name box38catch
+Catchts38.location 4384241.042 1766823.591 38
+Catchts38.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch34.ts
+Catchts38.rewind 0
+
+Catchts39.name box39catch
+Catchts39.location 4156605.699 1721216.406 39
+Catchts39.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch35.ts
+Catchts39.rewind 0
+
+Catchts40.name box40catch
+Catchts40.location 4288730.465 1759477.134 40
+Catchts40.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch36.ts
+Catchts40.rewind 0
+
+Catchts41.name box41catch
+Catchts41.location 4004658.85 1727510.896 41
+Catchts41.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch37.ts
+Catchts41.rewind 0
+
+Catchts42.name box42catch
+Catchts42.location 4320672.644 1753007.901 42
+Catchts42.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch38.ts
+Catchts42.rewind 0
+
+Catchts43.name box43catch
+Catchts43.location 4356658.432 1762275.469 43
+Catchts43.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch39.ts
+Catchts43.rewind 0
+
+Catchts44.name box44catch
+Catchts44.location 4069767.285 1658482.173 44
+Catchts44.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch40.ts
+Catchts44.rewind 0
+
+Catchts45.name box45catch
+Catchts45.location 4188005.87 1714433.581 45
+Catchts45.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch41.ts
+Catchts45.rewind 0
+
+Catchts46.name box46catch
+Catchts46.location 4008319.154 1595866.696 46
+Catchts46.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch42.ts
+Catchts46.rewind 0
+
+Catchts47.name box47catch
+Catchts47.location 4227046.568 1708628.044 47
+Catchts47.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch43.ts
+Catchts47.rewind 0
+
+Catchts48.name box48catch
+Catchts48.location 4264872.461 1719249.406 48
+Catchts48.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch44.ts
+Catchts48.rewind 0
+
+Catchts49.name box49catch
+Catchts49.location 4309701.698 1722068.931 49
+Catchts49.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch45.ts
+Catchts49.rewind 0
+
+Catchts50.name box50catch
+Catchts50.location 3860849.361 1617033.029 50
+Catchts50.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\boundary.ts
+Catchts50.rewind 0
+
+Catchts51.name box51catch
+Catchts51.location 4275817.217 1578668.729 51
+Catchts51.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch46.ts
+Catchts51.rewind 0
+
+Catchts52.name box52catch
+Catchts52.location 4290558.488 1577462.488 52
+Catchts52.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch47.ts
+Catchts52.rewind 0
+
+Catchts53.name box53catch
+Catchts53.location 4197638.831 1641167.152 53
+Catchts53.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch48.ts
+Catchts53.rewind 0
+
+Catchts54.name box54catch
+Catchts54.location 4245352.42 1569018.132 54
+Catchts54.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch49.ts
+Catchts54.rewind 0
+
+Catchts55.name box55catch
+Catchts55.location 4187341.982 1533269.09 55
+Catchts55.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch50.ts
+Catchts55.rewind 0
+
+Catchts56.name box56catch
+Catchts56.location 4224801.942 1539425.893 56
+Catchts56.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch51.ts
+Catchts56.rewind 0
+
+Catchts57.name box57catch
+Catchts57.location 4223752.625 1434863.805 57
+Catchts57.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch52.ts
+Catchts57.rewind 0
+
+Catchts58.name box58catch
+Catchts58.location 4231332.619 1433655.876 58
+Catchts58.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch53.ts
+Catchts58.rewind 0
+
+Catchts59.name box59catch
+Catchts59.location 4243855.517 1419835.224 59
+Catchts59.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch54.ts
+Catchts59.rewind 0
+
+Catchts60.name box60catch
+Catchts60.location 4260691.057 1416814.528 60
+Catchts60.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch55.ts
+Catchts60.rewind 0
+
+Catchts61.name box61catch
+Catchts61.location 4445261.219 1315655.719 61
+Catchts61.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch56.ts
+Catchts61.rewind 0
+
+Catchts62.name box62catch
+Catchts62.location 4215627.989 1352498.27 62
+Catchts62.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch57.ts
+Catchts62.rewind 0
+
+Catchts63.name box63catch
+Catchts63.location 4224419.758 1347114.069 63
+Catchts63.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch58.ts
+Catchts63.rewind 0
+
+Catchts64.name box64catch
+Catchts64.location 4233225.39 1331175.966 64
+Catchts64.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch59.ts
+Catchts64.rewind 0
+
+Catchts65.name box65catch
+Catchts65.location 4246819.025 1341542.41 65
+Catchts65.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch60.ts
+Catchts65.rewind 0
+
+Catchts66.name box66catch
+Catchts66.location 4195077.586 1309043.188 66
+Catchts66.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch61.ts
+Catchts66.rewind 0
+
+Catchts67.name box67catch
+Catchts67.location 4295691.382 1085573.101 67
+Catchts67.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch62.ts
+Catchts67.rewind 0
+
+Catchts68.name box68catch
+Catchts68.location 4189141.878 1260650.604 68
+Catchts68.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch63.ts
+Catchts68.rewind 0
+
+Catchts69.name box69catch
+Catchts69.location 4201755.562 1248095.792 69
+Catchts69.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch64.ts
+Catchts69.rewind 0
+
+Catchts70.name box70catch
+Catchts70.location 4177926.07 1275147.382 70
+Catchts70.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch65.ts
+Catchts70.rewind 0
+
+Catchts71.name box70catch
+Catchts71.location 4175923.592 1177553.464 71
+Catchts71.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch66.ts
+Catchts71.rewind 0
+
+Catchts72.name box70catch
+Catchts72.location 4186489.722 1272668.859 72
+Catchts72.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch67.ts
+Catchts72.rewind 0
+
+Catchts73.name box70catch
+Catchts73.location 4173070.93 1258122.758 73
+Catchts73.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch68.ts
+Catchts73.rewind 0
+
+Catchts74.name box70catch
+Catchts74.location 4156850.142 1227922.968 74
+Catchts74.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch69.ts
+Catchts74.rewind 0
+
+Catchts75.name box70catch
+Catchts75.location 4127061.663 1194152.697 75
+Catchts75.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch70.ts
+Catchts75.rewind 0
+
+Catchts76.name box70catch
+Catchts76.location 4124546.144 1172229.154 76
+Catchts76.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\catch71.ts
+Catchts76.rewind 0
+
+Catchts77.name box70catch
+Catchts77.location 4059037.299 1144352.931 77
+Catchts77.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\boundary.ts
+Catchts77.rewind 0
+
+Catchts78.name box70catch
+Catchts78.location 4435544.591 993008.8211 78
+Catchts78.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\boundary.ts
+Catchts78.rewind 0
+
+Catchts79.name box70catch
+Catchts79.location 4209706.901 968965.8198 79
+Catchts79.data C:\AllAtlantis\SEAP\new_model\run\inputs\catchts\boundary.ts
+Catchts79.rewind 0
+
+#############################################
+# Historical discard lists
+nDiscardts 0
+typeDiscardts 0
+
+#############################################
+# Residual lists - on market fish prices
+nResidualsts 0
+typeResidualsts 0
+
+#############################################
+# Economic statistics - GDP and fuel costs
+nEconts 0
+typeEconts 0
+
+##############################################
+# MPA (spatial management) files for cases where change through time
+# Same format as Catchts above
+nMPAts 0
+typeMPAts 0
+

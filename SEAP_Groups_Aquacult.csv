@@ -1,0 +1,68 @@
+Code,Index,IsTurnedOn,Name,Long Name,NumCohorts,NumGeneTypes,NumStages,NumSpawns,NumAgeClassSize,NumStocks,VerticallyMigrates,HorizontallyMigrates,isFished,IsImpacted,isTAC,InvertType,isPredator,IsCover,isSiliconDep,isAssessed,IsCatchGrazer,isOverWinter,isCultured,isHabDepend
+AQS,0,1,Aquacult_Salmon,Aquaculture Salmon,3,1,2,1,1,1,1,1,1,1,0,FISH,1,0,0,1,0,0,1,0
+AQT,1,1,Aquacult_Tuna,Aquaculture Tuna,2,1,1,1,1,1,1,1,1,1,0,FISH,1,0,0,1,0,0,1,0
+AQM,2,1,Aquacult_Mollusc,Aquaculture Oysters Mussels and Abalone,1,1,1,1,1,1,0,0,1,1,0,SED_EP_FF,1,0,0,1,0,0,1,0
+AQP,3,1,Aquacult_Crustacean,Aquaculture Prawns,1,1,1,1,1,1,0,0,1,1,0,MOB_EP_OTHER,1,0,0,1,0,0,1,0
+FPL,4,1,Planktiv_L_Fish,Large planktivorous fish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FBG,5,1,Grenadier,Blue grenader,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FPS,6,1,Planktiv_S_Fish,Small planktivorous fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FVD,7,1,Pisciv_D_Fish,Ocean piscivorous fish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FBM,8,1,Banded_Morwong,Banded morwong,10,1,2,1,9,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FVS,9,1,Pisciv_S_Fish,Shallow piscivorous fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FDR,10,1,Reef_Fish,Shallow demersal reef fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FVT,11,1,Pisciv_T_Fish,Large piscivorous fish (tuna),10,1,2,1,4,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FFH,12,1,Flathead,Flatheads,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FMM,13,1,Mesopel_M_Fish,Migratory mesopelagics fish ,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FMN,14,1,Mesopel_N_Fish,Non-migratory mesopelagics fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FBP,15,1,Purple_Wrasse,Purple wrasse,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FDD,16,1,Demersal_D_Fish,Deep demersal fish,10,1,2,1,4,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FDH,17,1,Demersal_Herbiv_Fish,Shallow demersal herbivores,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FDS,18,1,Demersal_S_Fish,Other shallow demersal fish,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FDM,19,1,Magpie_Perch,Magpie perch,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FDT,20,1,Territorial_Fish,Shallow territorial demersal fish,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FHC,21,1,Herring_Cale,Herring cale,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FBW,22,1,BlueThroat_Wrasse,Blue throat wrasse,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+FSN,23,1,Pink_Snapper,Pink snapper,10,1,2,1,5,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FWT,24,1,Warehou,Warehous and trevalla,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+FST,25,1,Striped_Tuna_Fish,Striped tuna,10,1,2,1,1,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+SHG,26,1,GreenEye_Dogfish,Green eye dogfish,10,1,2,1,6,1,1,1,1,1,1,SHARK,1,0,0,1,0,0,0,0
+SHD,27,1,Shark_D,Demersal sharks,10,1,2,1,3,1,1,1,1,1,1,SHARK,1,0,0,1,0,0,0,0
+SHS,28,1,Spikey_Dogshark,spiky dogshark,10,1,2,1,6,1,1,1,1,1,1,SHARK,1,0,0,1,0,0,0,0
+SHP,29,1,Shark_P,Pelagic sharks,10,1,2,1,4,1,1,1,1,1,1,SHARK,1,0,0,1,0,0,0,0
+SHR,30,1,Gummy_Shark,Gummy shark,10,1,2,1,6,1,1,1,1,1,1,SHARK,1,0,0,1,0,0,0,0
+SSK,31,1,SkateRay,Skates and rays,10,1,2,1,3,1,1,1,1,1,1,SHARK,1,0,0,1,0,0,0,0
+SB,32,1,Seabird,Seabirds,10,1,2,1,4,1,1,1,1,1,1,BIRD,1,0,0,1,0,0,0,0
+BGU,33,1,Urchins,Urchins,10,1,2,1,2,1,1,1,1,1,1,BIRD,1,0,0,1,0,0,0,1
+PIN,34,1,Pinniped,Pinnipeds,10,1,2,1,2,1,1,1,1,1,1,MAMMAL,1,0,0,1,1,0,0,0
+BGA,35,1,Abalone,Abalone,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,1
+WHB,36,1,Whale_Baleen,Baleen whales,10,1,2,1,6,1,1,1,1,1,1,MAMMAL,1,0,0,1,0,0,0,0
+WHS,37,1,Whale_Small,Dolphins,10,1,2,1,5,1,1,1,1,1,1,MAMMAL,1,0,0,1,1,0,0,0
+WHT,38,1,Whale_Tooth,Orcas,10,1,2,1,8,1,1,1,1,1,1,MAMMAL,1,0,0,1,1,0,0,0
+BRL,39,1,Lobster,Lobster,10,1,2,1,2,1,1,1,1,1,1,FISH,1,0,0,1,0,0,0,0
+CEP,40,1,Cephalopod,Cephalopod,2,1,2,1,1,1,1,1,1,1,1,CEP,1,0,0,1,0,0,0,0
+BFS,41,0,Filter_Shallow,Shallow benthic filter feeder,1,1,1,1,1,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0,0,1
+BFF,42,1,Filter_Other,Other benthic filter feeder,1,1,1,1,1,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0,0,1
+BFD,43,1,Filter_Deep,Deep benthic filter feeder,1,1,1,1,1,1,0,0,1,1,1,SED_EP_FF,1,1,0,1,0,0,0,1
+BG,44,0,Benthic_grazer,Benthic grazer,1,1,1,1,1,1,0,0,1,1,1,SED_EP_OTHER,1,0,0,1,0,0,0,0
+BMD,45,1,Macrobenthos,Macrozoobenthos,1,1,1,1,1,1,0,0,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0
+BML,46,0,Megazoobenthos,Megazoobenthos,1,1,1,1,1,1,1,1,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0
+BMS,47,1,Crabs,Crabs,1,1,1,1,1,1,0,0,1,1,1,MOB_EP_OTHER,1,0,0,1,0,0,0,0
+PWN,48,1,Prawn,Prawns,2,1,2,1,1,1,1,1,1,1,1,PWN,1,0,0,1,0,0,0,0
+ZL,49,1,Carniv_Zoo,Carnivorous zooplankton,1,1,1,1,1,1,1,1,1,1,1,LG_ZOO,1,0,0,1,0,0,0,0
+BD,50,1,Deposit_Feeder,Deposit Feeder,1,1,1,1,1,1,0,0,1,1,1,LG_INF,1,0,0,1,0,0,0,0
+MA,51,1,Macroalgae,Macroalgae,1,1,1,1,1,1,0,0,1,1,1,PHYTOBEN,0,1,0,1,0,0,0,0
+MB,52,0,MicroPB,Microphtybenthos,1,1,1,1,1,1,0,0,0,1,1,MICROPHTYBENTHOS,0,1,1,1,0,0,0,0
+SG,53,1,Seagrass,Seagrass,1,1,1,1,1,1,0,0,0,1,1,SEAGRASS,0,1,0,1,0,0,0,0
+BC,54,1,Benthic_Carniv,Benthic Carnivore,1,1,1,1,1,1,0,0,0,1,1,LG_INF,1,0,0,1,0,0,0,0
+ZG,55,1,Gelat_Zoo,Gelatinous zooplankton,1,1,1,1,1,1,1,0,0,1,1,LG_ZOO,1,0,0,1,0,0,0,0
+PL,56,1,Diatom,Diatom,1,1,1,1,1,1,0,0,0,0,0,LG_PHY,0,0,1,1,0,0,0,0
+DF,57,0,DinoFlag,Dinoflagellates,1,1,1,1,1,1,0,0,0,0,0,DINOFLAG,1,0,0,1,0,0,0,0
+PS,58,1,PicoPhytopl,Pico-phytoplankton,1,1,1,1,1,1,0,0,0,0,0,SM_PHY,0,0,0,1,0,0,0,0
+ZM,59,1,Zoo,Mesozooplankton,1,1,1,1,1,1,1,0,0,0,0,MED_ZOO,1,0,0,1,0,0,0,0
+ZS,60,1,MicroZoo,Microzooplankton,1,1,1,1,1,1,1,0,0,0,0,SM_ZOO,1,0,0,1,0,0,0,0
+PB,61,1,Pelag_Bact,Pelagic Bacteria,1,1,1,1,1,1,0,0,0,0,0,PL_BACT,0,0,0,0,0,0,0,0
+BB,62,1,Sed_Bact,Sediment Bacteria,1,1,1,1,1,1,0,0,0,0,0,SED_BACT,0,0,0,0,0,0,0,0
+BO,63,1,Meiobenth,Meiobenthos,1,1,1,1,1,1,0,0,0,0,0,SM_INF,1,0,0,0,0,0,0,0
+DL,64,1,Lab_Det,Labile detritus,1,1,1,1,1,1,0,0,0,0,0,LAB_DET,0,0,0,1,0,0,0,0
+DR,65,1,Ref_Det,Refractory detritus,1,1,1,1,1,1,0,0,0,0,0,REF_DET,0,0,0,1,0,0,0,0
+DC,66,1,Carrion,Carrion,1,1,1,1,1,1,0,0,0,0,0,CARRION,0,0,0,1,0,0,0,0

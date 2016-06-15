@@ -1,0 +1,628 @@
+#
+# 2/2114, Beth Fulton, Parameters for sampling model
+#
+########################################################
+
+# Run parameters
+tassessstart  3600000000           # Output start day (60)
+tassessinc    365         # Collect data every x days
+teatassessinc 3600000000000         # Collect diet information every x number of timesteps (1820)
+tClassicalAssessStart 3600000000000
+
+flaggen       1           # Whether to generate random numbers (1) or read them in (0)
+flagpatchy    0           # Whether want patchy temporal sampling (1) or monitoring at a regular frequency (0)
+flagcont      0           # Whether want to have within year continuous sampling (1) or vertebrate surveys only annual (0) even if physical properties collected more frequently
+flagareacorrect  1        # Whether to average sampling totals over space and time (1) or just number of sampling trips in the year (0) 
+minfreq       364         # Minimum frequency of sampling
+maxfreq       738         # Maximum frequency of sampling
+flagecosysassess  0       # Whether assessing ecosystem as well as specific species
+flagobsdata   0           # Whether using on board observers to collect catch information (for size distributions of catch etc)
+
+nfzones       1           # Number of fishing zones
+nsbox_i       34          # Number of sampling boxes (intensive sampling - or only sampling if only one design used)
+nsbox_o       1           # Number of sampling boxes (less intensive sampling)
+
+crit_depth    250         # Depth defining inshore-offshore split
+K_num_tot_assess 105        # Total number of biological groups in the assessment model (juveniles and adults handled separately for vertebrates)
+K_num_live       99        # Total number of living groups in the model (flora and fauna) 
+K_num_detritus   6         # Total number of detritus groups in the model (labile and refractory; water column and sediments) 
+K_num_eweinvert  21        # Total number of invertebrate groups considered in the network calculations
+K_num_charis     6         # Total number of charismatic groups in the model (birds and mammals)
+K_num_sampleage  10        # Total number of separate age classes sampled per group by the sampling model
+K_num_prod       24        # Total number of invertebrates production info is collected for (including flora)
+K_num_eat        18        # Total number of invertebrates consumption info is collected for (including flora)
+K_num_invfished  16        # Total number of invertebrate groups impacted by fishing (including flora)
+
+K_max_agekey    90           # Maximum number of age classes tracked per group in the sampling model's agelengthkey
+K_num_stomaches 1000       # Maximum number of stomaches sampled
+K_num_size    10          # Maximum number of size classes tracked per group in the sampling model's agelengthkey
+K_num_pelbin  36          # Number of bins used in the pelagic biomass size spectra analysis
+K_num_sedbin  4           # Number of bins used in the benthic biomass size spectra analysis
+K_num_abcbin  36          # Number of bins used in the abundance-biomass curve analysis
+K_num_trophbin 5          # Number of bins used in the trophic spectra curve analysis
+maxTL         8           # Maxium number of trophic levels considered in Lindeman network analysis
+
+samplediet    1           # Flag indicating whether sampled diets are output: 1 = no, 1 = yes
+ageout        0           # Flag indicating whether sampled age structures are output: 1 = no, 1 = yes
+
+# Zone each box belongs to
+zones         132
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+
+# Identity of each of the sampling boxes
+sites_other         1
+1
+
+# Identity of each of the sampling boxes
+sites_intense 34
+1 2 3 5 7 9 11 11 14 15 17 18 19 21 21 26 27 28 31 32 33 37 39 41 43 44 45 47 51 53 54 64 66 69
+
+# Zone each box belongs to (1=inshore, 1 = offshore)
+InOffshore    1
+0
+
+phys_samplingsize 1 # The number of times each physical sample should be sampled per sampling event. Unless you are have a need for a standard dev value then set this to 1.
+
+flagphys      2           # Flag for setting error structure used for physical and processes: 1 = uniform, 1 = normal, 2 = lognormal
+flaginvpbiom  2           # Flag for setting error structure used for pelagic invertebrate biomass: 1 = uniform, 1 = normal, 2 = lognormal
+flagepibiom   2           # Flag for setting error structure used for benthic epifauna invertebrate biomass: 1 = uniform, 1 = normal, 2 = lognormal
+flaginfbiom   2           # Flag for setting error structure used for benthic infauna invertebrate biomass: 1 = uniform, 1 = normal, 2 = lognormal
+flagdetbiom   2           # Flag for setting error structure used for detritus: 1 = uniform, 1 = normal, 2 = lognormal
+flagfishbiom  2           # Flag for setting error structure used for detritus: 1 = uniform, 1 = normal, 2 = lognormal
+flagverts     2           # Flag for setting error structure used for vertebrate info: 1 = uniform, 1 = normal, 2 = lognormal
+flagprod      2           # Flag for setting error structure used for production: 1 = uniform, 1 = normal, 2 = lognormal
+flageat       2           # Flag for setting error structure used for consumption: 1 = uniform, 1 = normal, 2 = lognormal
+flagcatch     2           # Flag for setting error structure used for catch: 1 = uniform, 1 = normal, 2 = lognormal
+flageffort    2           # Flag for setting error structure used for effort: 1 = uniform, 1 = normal,    2 = lognormal
+flagdiscrd    2           # Flag for setting error structure used for discard: 1 = uniform, 1 = normal, 2 = lognormal
+flagcount     2           # Flag for setting error structure used for bird counts: 1 = uniform, 1 = normal, 2 = lognormal
+flagcurve     4           # Flag for setting error structure used for selectivity curve estimate: 1 = uniform, 1 = normal, 2 = lognormal, 4 = know correct curve
+flagprms      1           # Flag for setting error structure used for selectivity curve parameters: 1 = uniform, 1 = normal, 2 = lognormal
+flagage       2           # Flag for setting error structure used for aging: 1 = uniform, 1 = normal, 2 = lognormal
+
+# Biased sample mean as percentage of true mean
+k_avgsalt     1.0         # For salinity  
+k_avgphys     1.0         # For physical properties (light, oxygen)
+k_avgnuts     1.0         # For nutrients
+k_avgprocs    1.0         # For processes (denitrification, nitrification) and chlorophyll a
+k_avgphytl    1.0         # For large phytoplankton
+k_avgphyts    1.0         # For small phytoplankton
+k_avgzoops    0.5         # For small zooplankton
+k_avgzoopl    1.0         # For large zooplankton
+k_avgcep      1.0         # For cephalopods
+k_avgpbact    0.7         # For pelagic bacteria
+k_avgsbact    0.5         # For sediment bacteria
+k_avginfs     0.5         # For small infauna (meiobenthos)
+k_avginfl     1.0         # For large infauna (deposit feeders and infaunal carnivores)
+k_avgepif1    1.0         # For epifauna type 1 (filter feeders and grazers)
+k_avgepif2    1.0         # For epifauna type 2 (macrozoobenthos)
+k_avgppben    1.0         # For benthic primary producers
+k_avgrdet     1.0         # For refractory detritus
+k_avgldet     1.0         # For labile detritus
+k_avgfish     1.0         # For fish and other vertebrate biomass
+k_avgpelpp    1.0         # For pelagic primary production
+k_avgzoopp    1.0         # For zooplankton production
+k_avgcepp     1.0         # For cephalopod production
+k_avgpbactp   1.0         # For pelagic bacterial production
+k_avgsbactp   1.0         # For sediment bacterial production
+k_avginfsp    1.0         # For small infauna (meiobenthos) production
+k_avginflp    1.0         # For large infauna (deposit feeders and infaunal carnivores) production
+k_avgepi1p    1.0         # For epifauna type 1(filter feeder) production
+k_avgepi2p    1.0         # For epifauna type 2 (grazers and macrozoobenthos) production
+k_avgbenpp    1.0         # For benthic primary production
+k_avgzoopeat  1.0         # For zooplankton consumption
+k_avgcepeat   1.0         # For cephalopod consumption
+k_avgpbacteat 1.0         # For pelagic bacterial consumption
+k_avgsbacteat 1.0         # For sediment bacterial consumption
+k_avginfseat  1.0         # For small infauna (meiobenthos) consumption
+k_avginfleat  1.0         # For large infauna (deposit feeders and infaunal carnivores) consumption
+k_avgepi1eat  1.0         # For epifauna type 1 (filter feeder) consumption
+k_avgepi2eat  1.0         # For epifauna type 2 (grazers and macrozoobenthos) consumption
+k_avgweight   1.0         # For vertebrate weights
+k_avgprodn    1.0         # For vertebrate production
+k_avgeat      1.0         # For vertebrate consumption
+k_avgdiscrd   0.7         # For vertebrate discard rates
+k_avgcatch    0.8         # For vertebrate total catch
+k_avgeffort   0.9         # For vertebrate total effort
+k_avgtdiscrd  0.8         # For vertebrate total discards
+k_avgcount    1.0         # For counts
+k_avgcobs     0.9         # For numbers observed in the catch
+k_avgcurve    1.0         # For selectivity curve used
+k_avgprms     1.0         # For parameters of selectivity curves
+k_avgage      1.0         # For aging
+
+# Error variance (as percentage of mean)
+k_varsalt     0.01        # For salinity
+k_varphys     0.25        # For physical properties (light, oxygen)
+k_varnuts     0.25        # For nutrients
+k_varprocs    0.25        # For processes (denitrification, nitrification) and chlorophyll a
+k_varphytl    0.36        # For large phytoplankton
+k_varphyts    0.49        # For small phytoplankton
+k_varzoops    1.0         # For small zooplankton
+k_varzoopl    0.36        # For large zooplankton
+k_varcep      0.36        # For cephalopods
+k_varpbact    0.49        # For pelagic bacteria
+k_varsbact    0.49        # For sediment bacteria
+k_varinfs     2.0         # For small infauna (meiobenthos)
+k_varinfl     1.5         # For large infauna (deposit feeders and infaunal carnivores)
+k_varepif1    0.36        # For epifauna type 1 (filter feeders and grazers)
+k_varepif2    0.36        # For epifauna type 2 (macrozoobenthos)
+k_varppben    0.36        # For benthic primary producers
+k_varrdet     0.36        # For refractory detritus
+k_varldet     0.36        # For labile detritus
+k_varfish     0.36        # For fish and other vertebrate biomass
+k_varpelpp    0.1         # For pelagic primary production
+k_varzoopp    0.1         # For zooplankton production
+k_varcepp     0.1         # For cephalopod production
+k_varpbactp   0.1         # For pelagic bacterial production
+k_varsbactp   0.2         # For sediment bacterial production
+k_varinfsp    0.2         # For small infauna (meiobenthos) production
+k_varinflp    0.2         # For large infauna (deposit feeders and infaunal carnivores) production
+k_varepi1p    0.2         # For epifauna type 1 (filter feeder) production
+k_varepi2p    0.2         # For epifauna type 2 (grazers and macrozoobenthos) production
+k_varbenpp    0.2         # For benthic primary production
+k_varzoopeat  0.1         # For zooplankton consumption
+k_varcepeat   0.1         # For cephalopod consumption
+k_varpbacteat 0.2         # For pelagic bacterial consumption
+k_varsbacteat 0.2         # For sediment bacterial consumption
+k_varinfseat  0.2         # For small infauna (meiobenthos) consumption
+k_varinfleat  0.2         # For large infauna (deposit feeders and infaunal carnivores) consumption
+k_varepi1eat  0.2         # For epifauna type 1 (filter feeder) consumption
+k_varepi2eat  0.2         # For epifauna type 2 (grazers and macrozoobenthos) consumption
+k_varweight   0.001       # For vertebrate weights
+k_varprodn    0.36        # For vertebrate production
+k_vareat      0.36        # For vertebrate consumption
+k_vardiscrd   0.25        # For vertebrate discards
+k_varcatch    0.25        # For vertebrate total catch
+k_vareffort   0.1         # For vertebrate total effort
+k_vartdiscrd  0.36        # For vertebrate total discards
+k_varcount    0.25        # For counts
+k_varcobs     0.1         # For numbers observed in the catch
+k_varcurve    1.0         # For selectivity curve used
+k_varprms     0.3         # For parameters of selectivity curves
+k_varage      1.0         # For aging
+
+## Vertebrate parameters (there must be as many entries in these vectors as given by nvert)
+# Assumes following order
+# AQS AQT AQM AQP FPL FBG FPS FVD FBM FVS FDR FVT FFH FMM FMN FBP FDD FDH FDS FDM FDT FHC FBW FSN 
+# FWT FST SHG SHD SHS SHP SHR SSK SB BGU PIN BGA WHB WHS WHT BRL 
+
+# Sample sizes for catch sub-sampling
+samplesize    67
+3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000 3000
+
+# Coefficient of allometic length-weight relation
+li_a          67
+0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435 0.006435
+        
+# Exponent in allometic length-weight relation
+li_b          67
+2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97 2.97
+
+# Size (cm) of the size (length) bins 
+li_bin        67
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+
+# Size (cm) of smallest size bin
+li_start      67
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+
+
+# Maxium length of each harvested group (cm) - vertebrates and invertebrates
+# Vertebrates in same order as given in sp_id in datareading.c and
+# and invertebrates in order of
+# AQS AQT AQM AQP FPL FBG FPS FVD FBM FVS FDR FVT FFH FMM FMN FBP FDD FDH FDS FDM FDT FHC
+# FBW FSN FWT SHG SHD SHS SHP SHR SSK PIN BRL BGA SB BGU WHB WHS WHT CEP PWN
+# BG BFS BFF BFD BMS BMD BML ZL BD MA ZG MB SG BC 
+li_max        57 
+50 50 50 50 50 50 50 30 140 120 90 120 350 40 20 10 40 150 60 140 45 80 80 130 95 60 140 260 120 350 110 190 220 250 160 250 80 3000 300 2000 50 20 15 15 20 10 10 30 20 60 5 30 600 10 1 50
+
+# Midwater cephalopod trawl                  midwcCEP
+# Cephalopod jig                             jigCEP
+# Midwater planktivore trawl                 midwcFP
+# Scallop dredge                             dredgeBFS
+# Demersal fish gillnet                      netFD
+# Shark gillnet                              netSH
+# Pelagic line for piscivores                plineFFH
+# Purse seine for piscivores                 pseineFFH
+# Purse seine for planktivores               pseineFP
+# Lobster pots                               trapBMS
+# Demersal fish traps                        trapFD
+# Demersal crustacean trawl                  dtrawlBMS
+# Demersal celphalopod trawl                 dtrawlCEP
+# Demersal fish trawl                        dtrawlFD
+# Demersal flathead trawl                    dtrawlFHC
+# Demersal orange roughy trawl               dtrawlFSN
+# Midwater fish trawl                        midwcFD
+# Danish seine                               dseineFHC
+# Demersal line for demersal fish            dlineFD
+# Demersal line for piscivores               dlineFVS
+# Demersal line for sharks                   dlineSH
+# Dive                                       diveBG
+# Purse seine for shallow water piscivores   pseineFVS
+# Mammal harvesting                          cullPIN
+# Prawn trawl                                ptrawlPWN
+# Demersal trawl for benthopelagics          dtrawlFBP
+# Midwater krill trawl                       midwcZL
+# Trap for shallow water demersals           trapFDH
+# Demersal line for shallow water demersals  dlineFDH
+# Gillnets for shallow water demersals       netFDH
+# Midwater prawn trawl                       midwcPWN
+# Kelp mowing                                mowMA
+# Recreational                               recfish
+
+## Fishing selectivity information for each fishery
+# There must be as many entries in q_lsm, q_sigma and selcurve as given by the value of nvert
+# midwcCEP jigCEP midwcFP dredgeBFS netFD netSH plineFST pseineFST pseineFP trapBMS trapFD dtrawlBMS
+# dtrawlCEP dtrawlFD dtrawlFSF dtrawlFSO midwcFD dseineFSF dlineFD dlineFVS dlineSH diveBG pseineFVS
+# cullPIN REC ptrawlPWN dtrawlFBP midwcZL trapFDH dlineFDH netFDH midwcPWN mowMA
+
+q_lsm         33
+0.3 0.4 15.0 0.5 65.0 100.0 110.0 40.0 0.05 0.1 50.0 0.07 0.3 50.0 40.0 30.0 80.0 40.0 90.0 80.0 120.0 0.1 35.0 0.0 0.2 0.07 15.0 1.0 50.0 50.0 50.0 0.3 0.1
+
+q_sigma       33
+0.0 0.0 30.0 0.0 40.0 55.0 200.0 0.1 0.25 0.0 45.0 0.0 0.0 90.0 50.0 30.0 70.0 50.0 90.0 80.0 200.0 0.0 0.15 0.0 0.0 0.0 30.0 3.0 45.0 45.0 40.0 0.0 0.0 0.0
+
+# Note that: 
+# selcurve == 1 means use constant selectivity
+# selcurve == 1 means use logistic selectivity
+# selcurve == 2 means use normal selectivity
+# selcurve == 3 means use lognormal selectivity
+# selcurve == 4 means use gamma selectivity
+selcurve      33
+0 0 2 0 2 2 4 1 1 0 4 0 0 2 2 2 2 2 4 4 4 0 1 0 0 0 2 0 4 4 2 0 0
+
+# Availabilty (acessibility of stock) of fish, per fishery
+avail_AQS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.0
+
+avail_AQT    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.0
+
+avail_AQM    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.0
+
+avail_AQP    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.0
+
+avail_FPL    33
+0 0 0.5 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.005 0 0.3 0 0 0 0 0 0
+
+avail_FPS    33
+0 0 0.5 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.005 0 0.3 0 0 0 0 0 0
+
+avail_FBG    33
+0 0 0.5 0 0 0 0 0 0.5 0 0 0 0 0.15 0.5 0 0 0.5 0 0 0 0 0.6 0 0.5 0 0.3 0 0.8 0.5 0.3 0 0
+
+avail_FVD    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0 0 0.7 0 0.8 0 0 0 0 0 0.1 0 0 0 0.9 0 0 0 0
+
+avail_FBM    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0.7 0.8 0 0 0.9 0.9 0 0 0 0 0.1 0 0 0 0 0 0 0 0
+
+avail_FVS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0.3 0.3 0 0 0 0.8 0 0 0.7 0 0.9 0 0 0 0 0.3 0 0 0
+
+avail_FVT    33
+0 0 0 0 0 0 0.8 0.7 0 0 0 0.3 0 0 0 0 0 0 0 0 0 0 0.3 0 0.3 0 0 0 0 0 0 0 0
+
+avail_FST    33
+0 0 0 0 0 0 0.8 0.7 0 0 0 0.3 0 0 0 0 0 0 0 0 0 0 0.3 0 0.3 0 0 0 0 0 0 0 0
+
+avail_FFH    33
+0 0 0 0 0.6 0.6 0.5 0.3 0 0 0 0 0 0 0.3 0 0 0.3 0 0 0 0 0.3 0 0.3 0 0 0 0 0 0 0 0
+
+avail_FDR    33
+0 0 0.5 0 0 0 0 0.6 0.6 0 0 0 0 0.5 0 0 0.6 0 0 0.6 0 0 0.7 0 0.7 0 0.5 0 0.8 0 0.6 0 0
+
+avail_FMM    33
+0.5 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0.5 0.5 0 0 0 0 0 0 0 0.001 0 0 0 0.1 0 0 0 0
+
+avail_FMN    33
+0 0 0 0 0 0 0 0 0 0 0.5 0 0 0.5 0 0.5 0 0 0 0 0 0 0 0 0.001 0 0 0 0 0.6 0 0 0
+
+avail_FBP    33
+0 0 0.3 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0.3 0 0 0 0 0 0 0 0.005 0 0.5 0 0 0 0 0 0
+
+avail_FDD    33
+0 0 0 0 0.5 0 0 0 0 0 0.8 0 0 0.3 0 0 0.7 0 0.7 0 0 0 0 0 0.1 0 0 0 0.8 0 0.6 0 0
+
+avail_FDS    33
+0.5 0 0 0 0.2 0 0 0 0 0 0 0 0 0.1 0.2 0.5 0.5 0.3 0.6 0 0 0 0.6 0 0.8 0 0 0 0.8 0.9 0.3 0 0
+
+avail_FHC    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.6 0 0 0.45 0 0 0 0 0.6 0 0.8 0 0 0 0.3 0.6 0.2 0 0
+
+avail_FBW    33
+0 0 0 0 0.5 0 0 0 0 0 0.5 0 0 0.3 0 0 0 0 0.6 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0
+
+avail_FSN    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0.6 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0
+
+avail_FDH    33
+0 0 0.5 0 0 0 0 0 0.6 0 0 0 0 0.5 0.5 0 0.1 0 0 0 0 0 0 0 0.1 0 0.5 0 0.6 0.8 0.3 0 0
+
+avail_FWT    33
+0 0 0 0 0.5 0 0 0 0 0 0 0 0 0.3 0.5 0 0 0 0.8 0 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0
+
+avail_FDM    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5 0 0 0.5 0 0 0 0 0.8 0 0.01 0 0 0 0.8 0.9 0.6 0 0
+
+avail_FDT    33
+0.4 0 0 0 0 0.6 0 0 0 0.8 0.8 0 0 0.4 0.4 0.4 0.4 0 0 0.8 0 0 0.6 0 0.5 0.4 0 0 0.8 0.6 0 0 0
+
+avail_SHG    33
+0 0 0.8 0 0.6 0.4 0 0 0 0.5 0 0 0.4 0.4 0.8 0.8 0 0.4 0.6 0 0.6 0 0 0 0.8 0.4 0.4 0 0 0 0 0 0
+
+avail_SHD    33
+0 0 0 0 0 0.3 0.1 0.2 0 0 0 0 0 0.2 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0
+
+avail_SHS    33
+0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0 0 0 0.01 0 0 0 0 0.1 0 0 0
+
+avail_SHP    33
+0 0 0 0 0.3 0.1 0.6 0 0 0 0 0 0 0 0 0 0 0 0.4 0 0.05 0 0.3 0 0.1 0 0 0 0 0 0 0 0
+
+avail_SHR    33
+0 0 0 0 0 0.2 0 0 0 0 0 0 0 0.3 0 0.5 0 0 0 0 0.1 0 0.1 0 0.001 0 0 0 0 0 0.2 0 0
+
+avail_SSK    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0
+
+avail_SB     33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.001 0 0 0 0 0 0 0 0
+
+avail_BGU     33
+0 0 0.1 0 0.1 0 0 0 0.5 0 0 0 0 0.1 0.1 0 0 0 0 0 0 0 0 0 0.1 0 0.5 0 0 0 0 0 0
+
+avail_BGA    33
+0 0 0 0 0.1 0 0 0 0 0 0 0 0 0.001 0.1 0 0 0 0.1 0.1 0.1 0 0 0 0.1 0.1 0 0 0 0.1 0 0 0
+
+avail_PIN    33
+0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0.1 0.0001 0 0 0 0 0 0 0 0
+
+avail_BRL    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0001 0 0 0 0 0 0 0 0
+
+avail_WHB    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0.0001 0 0 0 0 0 0 0 0
+
+avail_WHS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.001 0 0 0 0 0 0 0 0
+
+avail_WHT    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0.0001 0 0 0 0 0 0 0 0
+
+
+# Vector identifying each group as a consumer (1) or non-consumer (1)
+CONid              105
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+# Flag indicating whether or not the vertebrate is a planktivore
+# Assumes following order
+# AQS AQT AQM AQP FPL FBG FPS FVD FBM FVS FDR FVT FFH FMM FMN FBP FDD FDH FDS FDM FDT FHC FBW FSN FWT
+# SHG SHD SHS SHP SHR SSK PIN BRL BGA SB BGU WHB WHS WHT 
+EatsPlanktonid    40
+0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+# Detritus inputs to each zone
+input_DLwc         1
+0 
+
+input_DRwc         1
+0 
+
+input_DLsed        1
+0
+
+input_DRsed        1
+0
+
+# Proportion of discards flowing to each of the detritus pools
+Discard_Fate_DL 2
+0.0 0.2
+Discard_Fate_DC 2
+0.0 0.3
+Discard_Fate_DR 2
+0.0 0.5
+
+# PBR parameter for each vertebrate and cephalopods
+# AQS AQT AQM AQP FPL FBG FPS FVD FBM FVS FDR FVT FFH FMM FMN FBP FDD FDH FDS FDM FDT FHC FBW FSN FWT FST
+# SHG SHD SHS SHP SHR SSK PIN BRL BGA SB BGU WHB WHS WHT CEP
+R_max             67
+0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6
+
+# avgerage invertebrate length (mm)
+# PL DF PS ZS ZM ZL ZG CEP PWN PB BB BO BD BC BFS BFF BFD BG BMS BML BMD MA SG MB
+avg_inv_size 67
+0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1
+
+## Assessment parameters
+Assess_Tol        1.0      # Fractional convergence tolerance of minimisation
+Assess_Btol       0.105    # Acceptable proportional buffer on convergence           
+Assess_Max_Int    2000     # Maxiumum number of iterations of Amoeba 
+
+AssessNyr         20       # Length of longrun projections in Fref estimation
+
+## Remember to turn on (i.e. 1) later on for NEUS
+# Assessment parameter set-up for fished groups
+# AQS AQT AQM AQP FPL FBG FPS FVD FBM FVS FDR FVT FFH FMM FMN FBP FDD FDH FDS FDM FDT FHC FBW FSN FWT SHG
+# SHD SHS SHP SHR SSK PIN BRL BGA SB BGU WHB WHS WHT CEP PWN BG BFS BFF BFD BMS BMD BML ZL
+flag_assess 67
+0 0 0 0 0 5 0 0 5 0 0 0 5 0 0 0 5 5 5 5 0 5 5 5 5 5 5 0 0 5 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_bootstrap 67
+1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000
+
+assess_nat_mort   67
+0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15
+
+flag_prod_model   67 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+top_pcnt          67
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 
+
+bot_pcnt          67
+20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 
+
+assess_datastream 67
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+## Mapping of operating fleets to assessment fleets
+assess_nf_AQS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_AQT    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_AQM    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_AQP    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FPL    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FBG    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FPS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FVD    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FBM    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FVS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FDR    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FVT    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FFH    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FMM    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FMN    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FBP    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FDD    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FDH    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FDS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FDM    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FDT    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FHC    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FBW    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FSN    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FWT    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_FST    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_SHG    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_SHD    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_SHS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_SHP    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_SHR    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_SSK    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_SB     33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BGU    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_PIN    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BGA    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BRL    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_WHB    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_WHS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_WHT    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_CEP     33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_PWN    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BML    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BMS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BMD    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BFS    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BFF    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BFD    33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BG     33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_BD     33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_MA     33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+assess_nf_ZL     33
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
